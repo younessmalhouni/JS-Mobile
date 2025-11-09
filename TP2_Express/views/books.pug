@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1.text-2xl.font-bold.mb-4 Welcome #{user}
+  ul
+    each book in books
+      li.mb-2 #{book.title} — #{book.author}
+  a(href="/logout" class="text-red-500 mt-4 inline-block") Logout

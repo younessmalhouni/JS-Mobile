@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1.text-2xl.font-bold.mb-4 Login
+  if message
+    p.text-red-500 #{message}
+  form(action="/login" method="POST" class="flex flex-col gap-3")
+    input(type="text" name="username" placeholder="Username" required class="border p-2 rounded")
+    input(type="password" name="password" placeholder="Password" required class="border p-2 rounded")
+    button(type="submit" class="bg-green-500 text-white px-4 py-2 rounded") Login
+  a(href="/register" class="text-blue-500 mt-3") Don't have an account? Register
